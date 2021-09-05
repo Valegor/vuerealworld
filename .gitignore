@@ -4,17 +4,12 @@ node_modules
 _code_
 
 
-_backend_/laravel/node_modules
-_backend_/laravel/public/hot
-_backend_/laravel/public/storage
-_backend_/laravel/storage/*.key
-_backend_/laravel/vendor
-_backend_/laravel/.idea
-_backend_/laravel/.vagrant
-_backend_/laravel/Homestead.json
-_backend_/laravel/Homestead.yaml
-_backend_/laravel/npm-debug.log
-_backend_/laravel/.env
+
+_backend_/larapi/node_modules
+_backend_/larapi/vendor
+_backend_/larapi/.idea
+_backend_/larapi/.vagrant
+_backend_/larapi/.env
 
 # Ignore ide helper files
 _backend_/laravel/_ide_helper.php
