@@ -57,9 +57,9 @@ export default {
     onSubmit() {
       this.$store
         .dispatch('register', {
-          email: 'gwegwgwйуd191111@gwegwe.com',
-          username: 'gegsdйуцй11111234',
-          password: 'gdsgsdggregйцуйцушгншгн111234'
+          email: 'gweg345345wgwd@gwegwe.com',
+          username: 'ge34534sdgsd',
+          password: 'gdsgs345435dggrege'
         })
         .then(result => {
           console.log('result from register action', result)

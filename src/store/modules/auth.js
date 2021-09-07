@@ -17,8 +17,6 @@ const mutations = {
 }
 
 const actions = {
-
-
   register(context, credentials) {
     return new Promise(resolve => {
       authApi
@@ -32,21 +30,6 @@ const actions = {
         })
     })
   }
-
-  // register(context, credentials) {
-  //   return new Promise(resolve => {
-  //     authApi
-  //       .register(credentials)
-  //       .then(response => {
-  //         context.commit('registerSuccess', response.data.user)
-  //         resolve(response.data.user)
-  //       })
-  //       .catch(result => {
-  //         context.commit('registerFailure', result.response.data.errors)
-  //       })
-  //   })
-  // }
-
 }
 
 export default {
