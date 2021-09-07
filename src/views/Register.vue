@@ -55,7 +55,15 @@ export default {
   },
   methods: {
     onSubmit() {
-      this.$store.dispatch('register')
+      this.$store
+        .dispatch('register', {
+          email: 'gwegwgwйуd191111@gwegwe.com',
+          username: 'gegsdйуцй11111234',
+          password: 'gdsgsdggregйцуйцушгншгн111234'
+        })
+        .then(result => {
+          console.log('result from register action', result)
+        })
     }
   }
 }
