@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => 'dev-master',
-        'version' => 'dev-master',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'e45c37c8a5f57131c9d239f1fc104c227e66b6ee',
+        'reference' => '8953134b0dc4f8cad7d342907ecad1d0af4ff694',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -440,12 +440,12 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => 'dev-master',
-            'version' => 'dev-master',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'e45c37c8a5f57131c9d239f1fc104c227e66b6ee',
+            'reference' => '8953134b0dc4f8cad7d342907ecad1d0af4ff694',
             'dev_requirement' => false,
         ),
         'laravel/tinker' => array(
@@ -458,12 +458,12 @@
             'dev_requirement' => false,
         ),
         'lcobucci/jwt' => array(
-            'pretty_version' => '3.4.5',
-            'version' => '3.4.5.0',
+            'pretty_version' => '3.3.3',
+            'version' => '3.3.3.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../lcobucci/jwt',
             'aliases' => array(),
-            'reference' => '511629a54465e89a31d3d7e4cf0935feab8b14c1',
+            'reference' => 'c1123697f6a2ec29162b82f170dd4a491f524773',
             'dev_requirement' => false,
         ),
         'league/flysystem' => array(

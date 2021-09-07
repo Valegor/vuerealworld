@@ -51,26 +51,26 @@ class AuthController extends ApiController
      */
 
 
-    public function register(Request $request)
-    {
-        
-        $user = User::create([
-            'username' => $request->username,
-            'email' => $request->email,
-            'password' => bcrypt($request->password),
-        ]);
-
-        return ('User registered!');
-    }
-
-    // public function register(RegisterUser $request)
+    // public function register(Request $request)
     // {
+        
     //     $user = User::create([
-    //         'username' => $request->input('user.username'),
-    //         'email' => $request->input('user.email'),
-    //         'password' => bcrypt($request->input('user.password')),
+    //         'username' => $request->username,
+    //         'email' => $request->email,
+    //         'password' => bcrypt($request->password),
     //     ]);
 
-    //     return $this->respondWithTransformer($user);
+    //     return ('User registered!');
     // }
+
+    public function register(RegisterUser $request)
+    {
+        $user = User::create([
+            'username' => $request->input('user.username'),
+            'email' => $request->input('user.email'),
+            'password' => bcrypt($request->input('user.password')),
+        ]);
+
+        return $this->respondWithTransformer($user);
+    }
 }
