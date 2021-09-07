@@ -9,13 +9,17 @@
               Need an account?
             </router-link>
           </p>
-          VALIDATION ERRORS
+          <mcv-validation-errors
+            v-if="validationErrors"
+            :validation-errors="validationErrors"
+          ></mcv-validation-errors>
           <form @submit.prevent="onSubmit">
             <fieldset class="form-group">
               <input
                 class="form-control form-control-lg"
                 type="text"
                 placeholder="Username"
+                v-model="username"
               />
             </fieldset>
             <fieldset class="form-group">
@@ -23,6 +27,7 @@
                 class="form-control form-control-lg"
                 type="text"
                 placeholder="Email"
+                v-model="email"
               />
             </fieldset>
             <fieldset class="form-group">
@@ -30,6 +35,7 @@
                 class="form-control form-control-lg"
                 type="password"
                 placeholder="Password"
+                v-model="password"
               />
             </fieldset>
             <button
@@ -46,25 +52,45 @@
 </template>
 
 <script>
+import McvValidationErrors from '@/components/ValidationErrors'
+
 export default {
   name: 'McvRegister',
+  components: {
+    McvValidationErrors
+  },
+  data() {
+    return {
+      email: '',
+      password: '',
+      username: ''
+    }
+  },
   computed: {
     isSubmitting() {
       return this.$store.state.auth.isSubmitting
+    },
+    validationErrors() {
+      return this.$store.state.auth.validationErrors
     }
   },
   methods: {
     onSubmit() {
+      console.log('onSubmit')
       this.$store
         .dispatch('register', {
-          email: 'gweg345345wgwd@gwegwe.com',
-          username: 'ge34534sdgsd',
-          password: 'gdsgs345435dggrege'
+          email: this.email,
+          username: this.username,
+          password: this.password
         })
-        .then(result => {
-          console.log('result from register action', result)
+        .then(() => {
+          this.$router.push({name: 'home'})
         })
     }
+    /* increaseCounter() { */
+    /*   console.log('increaseCounter') */
+    /*   this.$store.commit('increment') */
+    /* } */
   }
 }
 </script>
